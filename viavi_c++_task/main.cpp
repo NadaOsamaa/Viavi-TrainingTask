@@ -23,6 +23,7 @@ string generate_phone_number() {
 
 class PhoneNo {
 public:
+     int num;
     void write_to_file(vector<string> phones)
     {
         ofstream file("phone_numbers.txt");
@@ -57,10 +58,16 @@ public:
         // Check if the phone number is exactly 11 digits long
         return (digitsOnly.length() == 11);
     }
+  friend istream&operator>>(istream &input ,PhoneNo&x)
+ {
+     input>>x.num;
+     return input ;
+ }
 };
 
 int main() {
-    PhoneNo PhoneNumber;
+    PhoneNo PhoneNumber; 
+    cin >> PhoneNumber;
     //generate and write numbers to file
     vector<string> phone_number;
     srand(static_cast<unsigned>(time(nullptr)));
