@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1692718726 source:c:\users\user\desktop\task\viavi-trainingtask\viavi_c++_task\main.cpp
+	<iostream>
+	<fstream>
+	<regex>
+
